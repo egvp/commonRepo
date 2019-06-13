@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<!-- NLP接口地址 -->
+	<http_url>http://22.11.97.160:9080/inbound/_ajax.do?method</http_url>
+	<!-- 报表dbserver接口地址 -->
+	<dbserver_url>http://22.11.97.152:8080/axis2/services/DBServer?wsdl</dbserver_url>
+	<ws_invoke_timeout>5000</ws_invoke_timeout>
+	<config_path>/app/gcti/config/</config_path>
+	<appid>2420568e-47fa-11e8-a13a-6c92bf26dfc6</appid>
+</config>
