@@ -23,7 +23,7 @@ public class XmlUtil {
         try {
             env = System.getProperty("gvp.config.path");
             if( env == null){
-            	env = "E:\\GCTI\\eclipse-jee-luna-SR2-win32-x86_64\\eclipse\\workspace\\commonUtil\\";
+            	env = "E:\\GIT_HOME\\commonRepo\\commonUtil\\";
             }
         } catch (Exception e) {
             // TODO Auto-generated catch block
@@ -66,7 +66,7 @@ public class XmlUtil {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-    	String configPath = "E:\\GCTI\\eclipse-jee-luna-SR2-win32-x86_64\\eclipse\\workspace\\commonUtil\\";
+    	String configPath = "E:\\GIT_HOME\\commonRepo\\commonUtil\\";
     	PropertyConfigurator.configure(getEnv() + "log4j.properties");
     	String fileName =getEnv() + "config.xml";
         JSONObject result = parseCommonXML(fileName);
