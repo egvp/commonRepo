@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSONObject;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.apache.log4j.chainsaw.Main;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
@@ -12,6 +11,7 @@ import org.dom4j.io.SAXReader;
 import java.io.File;
 import java.util.Iterator;
 import java.util.List;
+import java.util.UUID;
 
 
 public class XmlUtil {
@@ -63,6 +63,12 @@ public class XmlUtil {
         return jsonObj;
     }
 
+	public static String getUUID(){
+	    UUID uuid=UUID.randomUUID();
+	    String str = uuid.toString(); 
+	    String uuidStr=str.replace("-", "");
+	    return uuidStr;
+	}
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
@@ -71,6 +77,8 @@ public class XmlUtil {
     	String fileName =getEnv() + "config.xml";
         JSONObject result = parseCommonXML(fileName);
         logger.info(result);
+        String uuid = getUUID();
+        System.out.println("uuid is : " + uuid);
     }
 
 }
